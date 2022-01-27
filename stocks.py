@@ -12,9 +12,9 @@ Stock_Sold_For=Num_Shares*Selling_Price
 Selling_Commission=Commission_Rate*Stock_Sold_For
 Total_Recieved=Stock_Sold_For-Selling_Commission
 Profit_Or_Loss=Total_Recieved-Total_Paid
-print('Amount paid for stock:$',Amount_Paid_For_Stock)
-print('Commission paid on the purchase: $', Purchase_Commission)
-print('Amount the stock sold for: $', Stock_Sold_For)
-print('Commission paid on the sale: $', Selling_Commission)
-print('Profit: $', Profit_Or_Loss)
+print(f'Amount paid for stock:${Amount_Paid_For_Stock:7,.2f}')
+print(f'Commission paid on the purchase: ${Purchase_Commission:7,.2f}')
+print(f'Amount the stock sold for: ${Stock_Sold_For:7,.2f}')
+print(f'Commission paid on the sale: ${Selling_Commission:7,.2f}')
+print(f'Profit: ${Profit_Or_Loss:7,.2f}')
 
