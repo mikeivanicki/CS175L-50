@@ -3,18 +3,19 @@
 #Grade Average Assignment
 def main():
     a=0
-    s1=int(input('Enter score 1: '))
-    s2=int(input('Enter score 2: '))
-    s3=int(input('Enter score 3: '))
-    s4=int(input('Enter score 4: '))
-    s5=int(input('Enter score 5: '))
-    a=calc_average(s1,s2,s3,s4,s5)
+    a, s1, s2, s3, s4, s5 = calc_average()
     determine_grade(a,s1,s2,s3,s4,s5)
     repeat()
     
-def calc_average(s1,s2,s3,s4,s5):
+def calc_average():
+    for x in range (1,5):
+        s1 = my_random.number()
+        s2 = my_random.number()
+        s3 = my_random.number()
+        s4 = my_random.number()
+        s5 = my_random.number()
     a=float((s1+s2+s3+s4+s5)/5)
-    return a
+    return a, s1, s2, s3, s4, s5
 
 def determine_grade(a,s1,s2,s3,s4,s5):
     if s1 > 90 and s1<=100:
@@ -96,5 +97,7 @@ def repeat():
     re=input('Enter yes if you would like to continue: ')
     if re=='yes':
         main()
-        
+
+import my_random
+
 main()    
